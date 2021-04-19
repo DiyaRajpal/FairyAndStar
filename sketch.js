@@ -23,7 +23,7 @@ function setup() {
 	//write code to play fairyVoice sound
     fairySound.play(); 
 	//create fairy sprite and add animation for fairy
-    fairy=createsprite(700,700,50,50);
+    fairy=createSprite(700,700,50,50);
 	fairy.addAnimation(fairyImg);
 
 	star = createSprite(650,30);
