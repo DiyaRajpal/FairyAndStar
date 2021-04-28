@@ -13,7 +13,7 @@ function preload()
 	starImg = loadImage("star.png");
 	bgImg = loadImage("starNight.png");
 	//load animation for fairy here
-    fairyImg=loadAnimation("fairyImage1.png","fairyImage2.png");  
+    fairyImg=loadImage("fairy.png");  
 	fairySound=loadSound("JoyMusic.mp3");
 }
 
@@ -23,8 +23,9 @@ function setup() {
 	//write code to play fairyVoice sound
     fairySound.play(); 
 	//create fairy sprite and add animation for fairy
-    fairy=createSprite(700,700,50,50);
-	fairy.addAnimation(fairyImg);
+    fairy=createSprite(200,600,50,50);
+	fairy.addImage(fairyImg);
+    fairy.scale=0.2;
 
 	star = createSprite(650,30);
 	star.addImage(starImg);
@@ -66,10 +67,10 @@ function keyPressed() {
 	}
 
 	//writw code to move fairy left and right
-	if (keyDown("left_arrow")){
-		fairy.x=fairy.x+3;
+	if (keyCode===LEFT_ARROW){
+		fairy.x=fairy.x+10;
 	}
-	if (keyDown("right_arrow")){
-		fairy.x=fairy.x-3;
+	if (keyCode===RIGHT_ARROW){
+		fairy.x=fairy.x-10;
 	}
 }
